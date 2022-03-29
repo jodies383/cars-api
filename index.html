@@ -17,80 +17,74 @@
     </script>
 
     <script type="text/x-template" class="allCars">
-        {{#each car}}
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">Make</th>
-                <th scope="col">Model</th> 
-                <th scope="col">Color</th>
-                <th scope="col">Price</th>
-                <th scope="col">Registration Number</th>
-              </tr>
-            </thead>
-            <tbody>
-            <tr>
-               <td>
-                {{this.make}} 
-               </td>  
-               <td>
-                {{this.model}}
-               </td> 
-               <td>
-                {{this.color}}
-               </td> 
-               <td>
-                R {{this.price}}
-               </td> 
-               <td>
-                {{this.reg_number}}
-               </td> 
-            </tr>
-        </tbody>
-        </table>
-    {{/each}}
+        <div class="center">
+            <table class="table table-bordered" >
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Price</th>
+                    <th>Registration Number</th>
+                </tr>
+                {{#each car}}
+                <tr>
+                    <td>{{this.make}}</td>
+                    <td>{{this.model}}</td>
+                    <td>{{this.color}}</td>
+                    <td>R {{this.price}}</td>
+                    <td>{{this.reg_number}}</td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
     </script>
 
-    <title>Document</title>
+    <title>Cars API</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <h1>Cars API</h1>
+        </div>
+    </nav>
     <div class="container mt-12">
-        <h1>Cars API</h1>
-
-        <h2>Car Colors</h2>
-        <div class="colors">
-        </div>
-
-        <h2>Car Brands</h2>
-        <div class="brands">
-
-        </div>
-
-        <h2>All Cars</h2>
-        <div class="m1">
-            <label for="color">Filter by color</label>
-            <select name="carColor" id="carColor">
-                <option value="">All</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="orange">Orange</option>
-                <option value="white">White</option>
-                <option value="grey">Grey</option>
-            </select>
-            <label for="brand">Filter by brand</label>
-            <select name="carBrand" id="carBrand">
-                <option value="">All</option>
-                <option value="volkswagen">Volkswagen</option>
-                <option value="toyota">Toyota</option>
-                <option value="nissan">Nissan</option>
-                <option value="ford">Ford</option>
-            </select>
-            <button class="btn btn-secondary show">Show</button>
-        </div>
-        <div class="cars">
-
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h2>Car Colors</h2>
+                    <div class="colors"></div>
+                
+                    <h2>Car Brands</h2>
+                    <div class="brands"></div>
+                </div>
+                <div class="col-9">
+                    <h2>All Cars</h2>
+                    <div class="m1">
+                        <label for="color">Filter by color</label>
+                        <select name="carColor" id="carColor">
+                            <option value="">All</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="orange">Orange</option>
+                            <option value="white">White</option>
+                            <option value="grey">Grey</option>
+                        </select>
+                        <label for="brand">Filter by brand</label>
+                        <select name="carBrand" id="carBrand">
+                            <option value="">All</option>
+                            <option value="volkswagen">Volkswagen</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="nissan">Nissan</option>
+                            <option value="ford">Ford</option>
+                        </select>
+                        <button class="btn btn-secondary show">Show</button>
+                    </div>
+                    <div class="cars">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

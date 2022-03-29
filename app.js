@@ -1,18 +1,18 @@
-var colors = document.querySelector('.colors');
+const colors = document.querySelector('.colors');
 
-var brands = document.querySelector('.brands');
+const brands = document.querySelector('.brands');
 
-var cars = document.querySelector('.cars');
+const cars = document.querySelector('.cars');
 
-var show = document.querySelector('.show');
+const show = document.querySelector('.show');
 
-var templateElem = document.querySelector('.carInfo').innerHTML
+const templateElem = document.querySelector('.carInfo').innerHTML
 
-var carsTemplate = Handlebars.compile(templateElem)
+const carsTemplate = Handlebars.compile(templateElem)
 
-var templateAllCars = document.querySelector('.allCars').innerHTML
+const templateAllCars = document.querySelector('.allCars').innerHTML
 
-var allCars = Handlebars.compile(templateAllCars)
+const allCars = Handlebars.compile(templateAllCars)
 
 axios
 .get('https://api-tutor.herokuapp.com/v1/colors')
