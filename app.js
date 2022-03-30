@@ -37,11 +37,10 @@ axios
         car: result.data
     });
 })
-show.addEventListener('click', filter);
 
-function filter() {
-    var carColor = document.getElementById("carColor").value;
-    var carBrand = document.getElementById("carBrand").value;
+show.addEventListener('click', () => {
+    let carColor = document.getElementById("carColor").value;
+    let carBrand = document.getElementById("carBrand").value;
 
     if (carColor && carBrand) {
 
@@ -82,4 +81,5 @@ function filter() {
             })
     }
 
-}
+})
+
